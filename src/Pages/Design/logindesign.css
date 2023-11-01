@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.containers {
+    display: flex;
+    /* Add this to make the children flex items */
+    justify-content: space-between;
+    /* Add this to space elements evenly */
+    align-items: center;
+    /* Align items vertically in the container */
+    width: 50%;
+    height: 300px;
+    max-width: 100%;
+    position: relative;
+}
+
+.word {
+    /* padding-left: 1vw;
+    font-size: 10vw; Use viewport units for responsive font size
+    font-weight: bold;
+    padding-top: 2vw;
+    color: #57B961;
+    font-style: italic; */
+    font-size: 8vw;
+    position: absolute;
+    /* Set the position to absolute */
+    top: 20%;
+    /* Adjust the top position as a percentage of the container's height */
+    left: 140%;
+    /* Adjust the left position as a percentage of the container's width */
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    padding-top: 2vw;
+    color: #57B961;
+    ;
+    /* Center the element both horizontally and vertically */
+
+}
+
+.paragraph {
+    font-size: 1.5vw;
+    /* Use viewport units for responsive font size */
+    color: #57B961;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.login {
+    left: 57%;
+    top: 8vw;
+    font-size: 2vw;
+    /* Use viewport units for responsive font size */
+    color: #57B961;
+    font-style: italic;
+    padding-left: 1vw;
+    /* Use percentages for padding */
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
+    /* align-items: center; */
+}
+
+
+.logo {
+    padding-left: 1vw;
+    /* Use viewport units for responsive padding */
+    padding-top: 25vw;
+    /* Use viewport units for responsive padding */
+    flex: 1;
+}
+
+.login .LogIn {
+    top: 15vw;
+    background-color: #57B961;
+    color: black;
+    border-color: #023808;
+    font-size: 1.3vw;
+    /* Use viewport units for responsive font size */
+    padding: 1.5vw 10vw;
+    /* Use viewport units for responsive padding */
+    border-radius: 2vw;
+    /* Use viewport units for responsive border radius */
+    margin: 1vw 0;
+    cursor: pointer;
+    position: absolute;
+    left: 6vw;
+
+}
+
+.login .Register {
+    background-color: #57B961;
+    color: black;
+    border-color: #023808;
+    font-size: 1.3vw;
+    /* Use viewport units for responsive font size */
+    padding: 1.5vw 9.2vw;
+    /* Use viewport units for responsive padding */
+    border-radius: 2vw;
+    /* Use viewport units for responsive border radius */
+    cursor: pointer;
+    position: absolute;
+    margin: 1vw 0;
+    left: 6vw;
+    margin-top: 28vw;
+    box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login .Profile {
+    background-color: #57B961;
+    color: black;
+    border-color: #023808;
+    font-size: 1.3vw;
+    /* Use viewport units for responsive font size */
+    padding: 1.5vw 9.5vw;
+    /* Use viewport units for responsive padding */
+    border-radius: 2vw;
+    /* Use viewport units for responsive border radius */
+    cursor: pointer;
+    position: absolute;
+    margin: 1vw 0;
+    left: 6vw;
+    margin-top: 22vw;
+    box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login input {
+    width: 150%;
+    background-color: #dfe4e0;
+    color: #57B961;
+    border-radius: 20000000000vw;
+    /* Use viewport units for responsive border radius */
+    border-width: 0.5vw;
+    /* Use viewport units for responsive border width */
+    height: 5vw;
+    /* Use viewport units for responsive height */
+    outline: none;
+    font-size: 1.5vw;
+    /* Use viewport units for responsive font size */
+    padding: 2vw;
+    /* Use viewport units for responsive padding */
+    border: 0.2vw solid #023808;
+    /* Use viewport units for responsive border width */
+}
+
+.logo {
+    max-width: 700px;
+    /* Set a maximum width for the container */
+    margin: 0 auto;
+    /* Center the container on the page */
+    text-align: center;
+    /* Center the image horizontally */
+}
+
+.logo img {
+    width: 200%;
+    /* Make sure the image takes up 100% of the width of the container */
+    height: 1500%;
+    /* Make sure the image takes up 100% of the height of the container */
+    object-fit: cover;
+    /* Ensures the image covers the entire container */
+}

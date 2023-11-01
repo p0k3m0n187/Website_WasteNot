@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+.profile {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bttnedit {
+  color: #13d82a;
+  position: flex;
+  background-color: #ffffff;
+  font: 12vw italic;
+  border: 2px solid #13d82a;
+  font-size: 1vw;
+  padding: 1vw 4vw;
+  border-radius: 1vw;
+  margin: 1vw;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 22vw;
+  margin-left: 9.5vw;
+  text-decoration: underline;
+}
+
+.bttnedit2 {
+  color: #f83535;
+  position: absolute;
+  background-color: #ffffff;
+  font: 12vw italic;
+  border: 2px solid #f83535;
+  font-size: 1vw;
+  padding: 1vw 4vw;
+  border-radius: 1vw;
+  margin: 1vw;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 28vw;
+  margin-left: -11.5vw;
+  text-decoration: underline;
+}
+
+.Backs {
+  position: flex;
+  background-color: #57B961;
+  color: black;
+  border: 2px solid #023808;
+  font-size: 1vw;
+  padding: 1vw 4vw;
+  border-radius: 1vw;
+  margin: 1vw;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 12vw;
+  margin-left: 10.5vw;
+}
+
+.circle2 {
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  top: 10vw;
+  left: 7vw;
+  border-radius: 50%;
+  background-color: #ccc;
+  /* Set a background color for the circle */
+  z-index: -1;
+  /* Move the circle behind the image */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  /* Added box-shadow */
+}
+
+.bttnedit:hover {
+  background-color: #57B961;
+  color: black;
+}
+
+.bttnedit2:hover {
+  background-color: #f83535;
+  color: black;
+}
+
+
+.form-prof label {
+  font-size: 1vw;
+  padding: 1vw;
+  color: #646363;
+}
+
+.form-prof2 label {
+  font-size: 1vw;
+  padding: 1vw;
+  color: #646363;
+}
+
+
+.form-prof {
+  font-size: 1vw;
+  position: absolute;
+  width: 22vw;
+  top: 15vw;
+  left: 30vw;
+}
+
+.form-prof2 {
+  font-size: 1vw;
+  position: absolute;
+  width: 22vw;
+  top: 15vw;
+  left: 63vw;
+}
+
+.form-prof ::placeholder {
+  color: black;
+  font-size: 1.2vw;
+}
+
+.form-prof2 ::placeholder {
+  color: black;
+  font-size: 1.2vw;
+}
+
+.form-prof input {
+  background-color: #e2e2e2;
+  color: black;
+  width: calc(150% - 2vw);
+  font-size: 1vw;
+  height: 3vw;
+  border-radius: 10vw;
+  border: 1px solid #b9b9b9;
+  padding: 1.5vw;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.form-prof2 input {
+  background-color: #e2e2e2;
+  color: black;
+  width: calc(150% - 2vw);
+  font-size: 1vw;
+  border-radius: 10vw;
+  height: 3vw;
+  border: 1px solid #b9b9b9;
+  padding: 1.5vw;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
+/* @media (max-width: 100%) {
+  .header {
+    font-size: 5vw;
+  }
+
+  .profile,
+  .form-prof label,
+  .form-prof2 label,
+  .form-prof,
+  .form-prof2,
+  .form-prof ::placeholder,
+  .form-prof2 ::placeholder,
+  .form-prof input,
+  .form-prof2 input,
+} */
