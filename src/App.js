@@ -51,6 +51,7 @@ const App = () => {
   }, [storedForm]);
 
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login onFormSwitch={toggleForm} />} />
@@ -62,16 +63,9 @@ const App = () => {
         <Route path='/market' element={<Market onFormSwitch={toggleForm} />} />
         <Route path='/inventory' element={<Inventory onFormSwitch={toggleForm} />} />
         <Route path='/profile' element={<Profile onFormSwitch={toggleForm} />} />
-        {/* <Sidebar>
-          <Route path='/homepage' element={<Homepage onFormSwitch={toggleForm} />} />
-          <Route path='/staff' element={<Staff onFormSwitch={toggleForm} />} />
-          <Route path='/menu' element={<Menu onFormSwitch={toggleForm} />} />
-          <Route path='/market' element={<Market onFormSwitch={toggleForm} />} />
-          <Route path='/inventory' element={<Inventory onFormSwitch={toggleForm} />} />
-          <Route path='/profile' element={<Profile onFormSwitch={toggleForm} />} />
-        </Sidebar> */}
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

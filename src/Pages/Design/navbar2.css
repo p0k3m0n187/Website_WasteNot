@@ -6,6 +6,11 @@ body{
     margin: 0;
 }
 
+.site-title{
+    padding-left: 5vw;
+
+}
+
 .nav{
     background-color: #57B961;
     color: white;

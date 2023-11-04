@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+}
+
+
+.icon-button {
+    display: absolute;
+    /* or any other valid value for display */
+    padding: 1.5vw 1vw;
+    width: 10%;
+    border-radius: 2vw;
+    height: 8em;
+    background-color: #24b134;
+    color: #fff;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    font-size: 110%;
+    transition: background-color 0.3s;
+    margin-left: 8vw;
+    font-weight: 600;
+    /* Remove 'px' after the value */
+    box-shadow: -1em 1rem 1rem rgba(0, 0, 0, 0.4);
+    /* Added box-shadow */
+}
+
+
+.icon-button2,
+.icon-button3,
+.icon-button4,
+.icon-button5 {
+    display: absolute;
+    /* or any other valid value for display */
+    padding: 1.5vw 1vw;
+    width: 10vw;
+    border-radius: 2vw;
+    height: 8em;
+    background-color: #24b134;
+    color: #fff;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    font-size: 110%;
+    transition: background-color 0.3s;
+    margin-left: 1vw;
+    font-weight: 600;
+    /* Remove 'px' after the value */
+    box-shadow: -1em 1rem 1rem rgba(0, 0, 0, 0.4);
+    /* Added box-shadow */
+}
+
+
+/* Style for the icon inside the button */
+.icon-button svg,
+.icon-button2 svg,
+.icon-button3 svg,
+.icon-button4 svg,
+.icon-button5 svg {
+    margin-right: 5px;
+    font-size: 3em;
+}
+
+/* Hover effect */
+.icon-button:hover,
+.icon-button2:hover,
+.icon-button3:hover,
+.icon-button4:hover,
+.icon-button5:hover {
+    background-color: white;
+    color: #13d82a;
+    border: 2px solid #13d82a;
+}
+
+.notify {
+    margin-top: -8vw;
+    position: flex;
+    margin-left: 76%;
+}
+
+.box-container {
+    position: absolute;
+    width: 20%;
+    height: 79%;
+    top: 18%;
+    left: 76%;
+    border-radius: 5%;
+    background-color: #ccc;
+    border: 2px solid #13d82a;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.scrollable-container {
+    margin-top: 8%;
+    margin-left: 7%;
+    height: 38rem;
+    width: 68%;
+    /* Set a maximum height to enable scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    border: 2px solid #13d82a;
+}
+
+.menu-cont {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    border: 2px solid #13d82a;
+    height: 30%;
+}
+.item {
+    flex: 0 0 auto; /* Allow items to grow, but don't allow shrinking or basis size */
+    margin-right: 10px; /* Optional: Add space between items */
+    /* Add any other styling you need for your items */
+} 

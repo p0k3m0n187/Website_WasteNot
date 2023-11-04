@@ -107,27 +107,10 @@ body {
     position: absolute;
     margin: 1vw 0;
     left: 6vw;
-    margin-top: 28vw;
-    box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
-}
-
-.login .Profile {
-    background-color: #57B961;
-    color: black;
-    border-color: #023808;
-    font-size: 1.3vw;
-    /* Use viewport units for responsive font size */
-    padding: 1.5vw 9.5vw;
-    /* Use viewport units for responsive padding */
-    border-radius: 2vw;
-    /* Use viewport units for responsive border radius */
-    cursor: pointer;
-    position: absolute;
-    margin: 1vw 0;
-    left: 6vw;
     margin-top: 22vw;
     box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .login input {
     width: 150%;

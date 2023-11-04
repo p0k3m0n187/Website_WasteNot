@@ -33,12 +33,12 @@ export const Login = (props) => {
               <lable hmtlFor="Password">Password</lable>
               <input value={Password} onChange={(e) => setPassword(e.target.value)} type='Password' placeholder='**********' id="Password" name="Password" />
             </form>
-            <button type="Submit" class="LogIn">Log In</button>
+            <Link to="/homepage"><button type="Submit" class="LogIn">Log In</button></Link>
             {/* <button class="Register" onClick={() => props.onFormSwitch('Register')}>Register</button>
             <button class="Profile" onClick={() => props.onFormSwitch('Profile')}>Profile</button> */}
             
             <Link to="/register" className="Regist"><button class="Register">Register</button></Link>
-            <Link to="/profile" className="Prof"><button class="Profile">Profile</button></Link>
+            {/* <Link to="/profile" className="Prof"><button class="Profile">Profile</button></Link> */}
 
 
           </div>
