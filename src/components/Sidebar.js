@@ -57,7 +57,7 @@ const Sidebar = ({ children }) => {
                     {/* <h1 style={{ display: isOpen ? "block" : "none" }} className='Logos'>Logo</h1> */}
                     <div href="/" className="Logos"><img src={image} width={150} height={100} style={{ display: isOpen ? "block" : "none" }} alt="SideBar logo"/></div>
                     {/* <div  style={{ display: isOpen ? "block" : "none" }} className='Logos'>Logo</h1> */}
-                    <div style={{ marginLeft: isOpen ? "15vw" : "1vw" }} className='bars'>
+                    <div style={{ marginLeft: isOpen ? "15vw" : "0.5vw" }} className='bars'>
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
