@@ -163,6 +163,206 @@ export const Inventory = (props) => {
                             </div>
                         </div>
                     </div>
+                    
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining2222222222222222222222222222222222222222</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='ingredient'>
+                        <img class='ingred-sample' src={image} alt="ingredient" />
+                        <h2>Total Ingredient</h2>
+                        <div class="percent-bar">
+                            <div class='percent-bar-fill'></div>
+                            <div class='remaining'>25kg Remaining</div>
+                            <div class='total'>25kg Total</div>
+                        </div>
+                        
+                        <button class="open-popup"><FaArrowCircleDown /></button>
+                        <div className="backdrop" style={{display: 'none'}}></div>
+                        <div class="popup" id="myPopup">
+                            <div class="popup-content">
+                                <span class="close" id="close-popup">&times;</span>
+                                <h2>Popup Content</h2>
+                                <p>This is some content for the popup.</p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class='ingredient'>
                         <img class='ingred-sample' src={image} alt="ingredient" />

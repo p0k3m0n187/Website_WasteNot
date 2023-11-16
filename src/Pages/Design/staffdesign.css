@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+.staff-container {
+    margin: 0;
+}
+
+.staff-scrollable {
+    margin-top: -1vw;
+    display: flex;
+    flex-direction: column; /* Adjust to make it a vertical column */
+    overflow-y: auto;
+    width: 94%;
+    top: 2vw;
+    margin-left: 5.5%;
+    background-color: none;
+}
+
+.total-staff{
+    display: flex;
+    position: absolute;
+    margin-left: 79%;
+    height: 13%;
+    border: 0.2vw solid white;
+    width: 13%;
+    border-radius: 0.5vw;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: #15be28;
+    padding: 0.4vw;
+}
+
+.bttn-addstaff{
+    display: flex;
+    position: absolute;
+    margin-left: 74vw;
+    background-color: white;
+    border-radius: 100%;
+    border-color: none;
+    font-size: 3vw;
+    color: #15be28;
+    top: 8vw;
+}
+
+.staff-scrollable td{
+    padding: 3.5vw;
+}
+
+.staff-scrollable .profile{
+    width: 10vw
+}
+
+.staff-scrollable img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
+}
+
+.staff-scrollable th{
+    text-align: left;
+    background-color: #13d82a;
+    color: white;
+    padding: 2vw;
+    padding-left: 5vw;
+}
+
+.staff-title {
+    margin-left: 1.5vw;
+    margin-bottom: 2vw;
+    font-size: 5vw;
+    color: white;
+    text-shadow: -1px -1px 3px #24b134, 1px -1px 3px #24b134, -1px 1px 3px #24b134, 1px 1px 3px #24b134;
+}
+
+.table-staff table {
+    border-collapse:collapse;
+    position: absolute;
+}
+
+.table-staff {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar input {
+    margin-left: 14vw;
+    margin-top: -8vw;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 55vw;
+    height: 3vw;
+}
+
+.search-bar button {
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    background-color: #13d82a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -8vw;
+}
+
+.search-bar button svg {
+    font-size: 1.2vw;
+}
+
+.staff-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Adjust alignment as needed */
+}
+
+.staff-info label,
+.staff-info input {
+    margin-bottom: 0.5vw; /* Adjust the margin as needed */
+}
+
+.staff-info label {
+    flex-basis: 15%;
+    font-size: 1vw;
+    margin-top: 0.8vw;
+}
+
+.staff-info input {
+    flex-basis: 80%; /* Adjust the width of input fields as needed */
+    height: 3vw;
+    border-radius: 1vw;
+    padding:1vw;
+}
+
+.delete-button {
+    position: absolute;
+    color: #ff6666;
+    border: none;
+    margin-top: -20.1vw;
+    margin-left: 68%;
+    font-size: 2vw;
+    background-color: transparent;
+}
+
+.delete-button:hover{
+    background-color: transparent;
+    color: #a31c1c;
+    border: none;
+}

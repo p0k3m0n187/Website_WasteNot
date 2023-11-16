@@ -152,14 +152,6 @@ export const Register = (props) => {
 
       <div class="header ">Registration</div>
       <div className="form-group">
-        {/* <label htmlFor="image">Select Restaurant Image</label>
-        <input
-          type="file"
-          className="form-group"
-          id="image"
-          accept="image/*"
-          onChange={handleImageChange}
-        /> */}
         <label htmlFor="image">Select Restaurant Image</label>
         <br />
         <br />

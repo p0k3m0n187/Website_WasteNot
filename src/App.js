@@ -8,26 +8,6 @@ import { Staff } from './Pages/Staff.js';
 import { Menu } from './Pages/Menu.js';
 import { Inventory } from './Pages/Inventory.js';
 import { Market } from './Pages/Market.js';
-// import Sidebar from './components/Sidebar.js';
-
-// function App() {
-//   const [currentForm, setCurrentForm] = useState('LogIn');
-
-//   const toggleForm = (formName) => {
-//     setCurrentForm(formName);
-//   }
-//   return (
-//     <div className='App'>
-//       {
-//         currentForm === "Register" ? <Register onFormSwitch={toggleForm} /> : currentForm === "Profile" ? <Profile onFormSwitch={toggleForm} /> : <Login onFormSwitch={toggleForm} />
-//       }
-//     </div >
-
-//   )
-
-// }
-
-// export default App;
 
 const App = () => {
   const storedForm = localStorage.getItem('currentForm');
@@ -43,7 +23,6 @@ const App = () => {
   }, [currentForm]);
 
   useEffect(() => {
-    // If storedForm is not present or it's not a valid form, set it to 'Login'
     if (!['Login', 'Register', 'Profile'].includes(storedForm)) {
       localStorage.setItem('currentForm', 'Login');
       setCurrentForm('Login');

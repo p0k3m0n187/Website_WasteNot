@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+.menu-container {
+    margin: 0;
+}
+
+.menu-title {
+    position: flex;
+    display: flex;
+    margin-left: 8%;
+    font-size: 2vw;
+    color: white;
+    text-shadow: -1px -1px 3px #24b134, 1px -1px 3px #24b134, -1px 1px 3px #24b134, 1px 1px 3px #24b134;
+}
+
+.scrollabe-menu {
+    margin-top: 1vw;
+    position: flex;
+    overflow-x: auto;
+    width: 93%;
+    height: 34.5vw;
+    margin-left: 6%;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-table table {
+    border-collapse: collapse;
+    position: flex;
+}
+
+.menu-table th {
+    background-color: #13d82a;
+    border: 2px solid #ffffff;
+    color: white;
+    padding: 2vw;
+    width: 50%;
+}
+
+.menu-table td {
+    border: 2px solid black;
+    padding: 1vw;
+    font-size: 0.8vw;
+}
+
+.menu-table td .menu-img {
+    margin-left: 7vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
+}
+
+.menu-table h2 {
+    padding: 2vw;
+    display: absolute;
+    margin-top: -5vw;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #24b134, 1px 1px 3px #24b134, 1px 1px 3px #24b134, 1px 1px 3px #24b134;
+    font-weight: 1000;
+    margin-left: 5vw;
+}
+
+.total-menu {
+    position: flex;
+    margin-left: 23%;
+    margin-top: -6%;
+    height: 12%;
+    border: 0.2vw solid white;
+    width: 13%;
+    border-radius: 0.5vw;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: #13d82a;
+    padding: 0.4vw;
+}
+
+.total-menu svg {
+    position: absolute;
+    font-size: 3.5vw;
+    color: rgb(241, 241, 241);
+    top: 8vw;
+    margin-left: 1vw;
+}
+
+.total-menu h2 {
+    position: flex;
+    color: white;
+    text-align: center;
+}
+
+.total-menu h1 {
+    position: flex;
+    color: white;
+    margin-left: 5.5vw;
+    font-size: 3vw;
+}
+
+.menu-container .bttn-add {
+    display: flex;
+    position: absolute;
+    margin-left: 90vw;
+    background-color: white;
+    border-radius: 100%;
+    border-color: none;
+    font-size: 5vw;
+    color: #15be28;
+    top: 7.4vw;
+}
+
+.bttn-add:hover{
+    background-color: #13d82a;
+    color: white;
+    border: none;
+}

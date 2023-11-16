@@ -48,15 +48,74 @@ export const Market = (props) => {
             <Sidebar />
             <div className="mark-container">
                 <div className='mark-title'><h1>Market</h1></div>
+                <div><button class='bttn-request'><h4>Requests</h4><h5>50</h5></button></div>
+                    <div class='total-market'>
+                        <h2>Total Ingredient</h2>
+                        <br />
+                        <FaWarehouse />
+                        <h1>50</h1>
+                    </div>
+                    <div className='scrollable-market'>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                                <tr>
+                                    <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
+                                    <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
+                                    <td><h1>35kg</h1></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
 
-                <div><button class='bttn-request'><h4>Requests</h4><h5>50</h5></button>
                     <div className="backdrop" style={{ display: 'none' }}></div>
-                    <div class="popup" id="myPopup">
+                    <div className="popup" id="myPopup">
                         <div class="popup-content">
                             <span class="close" id="close-popup">&times;</span>
-                            <div className='scrollable-request'>
-                                <table>
+                            <div class='scrollable-request'>
+                                <table class='table-market'>
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -202,71 +261,7 @@ export const Market = (props) => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
-                <div class='total-market'>
-                    <h2>Total Ingredient</h2>
-                    <br />
-                    <FaWarehouse />
-                    <h1>50</h1>
-                </div>
-                <div className='scrollable-market'>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                            <tr>
-                                <td><img class='market-img' src={image} alt="ingredient" /><h2>Product 1</h2></td>
-                                <td><h3>Price:</h3><div class='price-cont'>$15.00</div><h5>/Kg</h5></td>
-                                <td><h1>35kg</h1></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
         </>
     );
 };
