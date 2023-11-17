@@ -9,7 +9,8 @@
 .staff-scrollable {
     margin-top: -1vw;
     display: flex;
-    flex-direction: column; /* Adjust to make it a vertical column */
+    flex-direction: column;
+    /* Adjust to make it a vertical column */
     overflow-y: auto;
     width: 94%;
     top: 2vw;
@@ -17,47 +18,68 @@
     background-color: none;
 }
 
-.total-staff{
+.total-staff {
     display: flex;
     position: absolute;
     margin-left: 79%;
-    height: 13%;
+    height: 7vw;
     border: 0.2vw solid white;
     width: 13%;
     border-radius: 0.5vw;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
     background-color: #15be28;
     padding: 0.4vw;
+    color: white;
 }
 
-.bttn-addstaff{
-    display: flex;
+.total-staff svg {
+    position: flex;
+    display: absolute;
+    font-size: 3.5vw;
+    color: #ffffff;
+    top: 2vw;
+    margin-top: 2vw;
+    margin-left: -9vw;
+}
+
+.total-staff h1 {
+    font-size: 2.5vw;
+    position: flex;
+    margin-left: 3vw;
+    margin-top: 2vw;
+}
+
+.bttn-addstaff {
     position: absolute;
-    margin-left: 74vw;
+    margin-left: 73vw;
+    margin-top: -4vw;
     background-color: white;
-    border-radius: 100%;
-    border-color: none;
+    border: none;
     font-size: 3vw;
     color: #15be28;
-    top: 8vw;
+    cursor: pointer;
 }
 
-.staff-scrollable td{
+.bttn-addstaff:hover{
+    color: #069b17;
+}
+
+.staff-scrollable td {
     padding: 3.5vw;
 }
 
-.staff-scrollable .profile{
+.staff-scrollable .profile {
     width: 10vw
 }
 
-.staff-scrollable img{
+.staff-scrollable img {
     width: 10vw;
     height: 10vw;
     border-radius: 50%;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.50);
 }
 
-.staff-scrollable th{
+.staff-scrollable th {
     text-align: left;
     background-color: #13d82a;
     color: white;
@@ -74,7 +96,9 @@
 }
 
 .table-staff table {
-    border-collapse:collapse;
+    position: flex;
+    display: absolute;
+    border-collapse: collapse;
     position: absolute;
 }
 
@@ -118,12 +142,13 @@
 .staff-info {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start; /* Adjust alignment as needed */
+    align-items: flex-start;
 }
 
 .staff-info label,
 .staff-info input {
-    margin-bottom: 0.5vw; /* Adjust the margin as needed */
+    margin-bottom: 0.5vw;
+    /* Adjust the margin as needed */
 }
 
 .staff-info label {
@@ -133,10 +158,11 @@
 }
 
 .staff-info input {
-    flex-basis: 80%; /* Adjust the width of input fields as needed */
+    flex-basis: 80%;
+    /* Adjust the width of input fields as needed */
     height: 3vw;
     border-radius: 1vw;
-    padding:1vw;
+    padding: 1vw;
 }
 
 .delete-button {
@@ -147,9 +173,10 @@
     margin-left: 68%;
     font-size: 2vw;
     background-color: transparent;
+    cursor: pointer;
 }
 
-.delete-button:hover{
+.delete-button:hover {
     background-color: transparent;
     color: #a31c1c;
     border: none;

@@ -9,6 +9,7 @@ import {
     FaSearch,
     FaTrash
 } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 export const Staff = (props) => {
     return (
@@ -18,17 +19,18 @@ export const Staff = (props) => {
             <div className="staff-container">
                 <div class='staff-scrollable'>
                     <div class='staff-title'>Staffs</div>
+                    
                     <div class='total-staff'>
                         <h2>Total Ingredient</h2>
                         <br />
                         <FaWarehouse />
                         <h1>50</h1>
                     </div>
+                    <div> <Link to="/addstaff"><button class='bttn-addstaff'><FaPlusCircle /></button></Link></div>
                     <div className='search-bar'>
                         <input type="text" placeholder="Search..." />
-                        <button><FaSearch /></button>
+                       <button><FaSearch /></button>
                     </div>
-                    <div><button class='bttn-addstaff'><FaPlusCircle /></button></div>
                     <table>
                         <thead>
                             <tr>

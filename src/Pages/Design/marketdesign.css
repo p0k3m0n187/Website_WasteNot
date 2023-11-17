@@ -200,7 +200,7 @@
     margin-top: 1.5vw;
 }
 
-.popup{
+.scrollable-market .popup{
     border-radius: 2vw;
     overflow: hidden;
     border: 5px solid #26933F;

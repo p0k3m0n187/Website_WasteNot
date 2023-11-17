@@ -21,6 +21,7 @@ export const Profile = (props) => {
   const [isEditable, setIsEditable] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+
   const toggleConfirmPassword = () => {
     setShowConfirmPassword(!showConfirmPassword);
   }
@@ -225,6 +226,7 @@ export const Profile = (props) => {
                 />
                 {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
               </>
+
             )}
 
             {/* <label>Confirm Password</label>
@@ -243,14 +245,16 @@ export const Profile = (props) => {
         <div>
           {isEditable ? (
             <>
-              <button className="bttnedit" onClick={toggleEdit}>Save</button>
+              <button className="bttnsave" onClick={toggleEdit}>Save</button>
               <button className="bttnedit2" onClick={handleCancel}>Cancel</button>
             </>
           ) : (
-            <button className="bttnedit" onClick={toggleEdit}>Edit Profile</button>
+            <>
+              <button className="bttnedit" onClick={toggleEdit}>Edit Profile</button>
+              <Link to="/login"><button className="Backs">LOG OUT!</button></Link>
+            </>
           )}
         </div>
-        <Link to="/login"><button className="Backs">LOG OUT!</button></Link>
       </div>
     </>
   )
