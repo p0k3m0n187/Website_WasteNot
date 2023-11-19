@@ -3,6 +3,9 @@ import './Design/profiledesign.css';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import Navbar2 from '../components/NavBar2';
+import {
+  FaPlusCircle
+} from 'react-icons/fa';
 
 export const Profile = (props) => {
   const initialFormData = {
@@ -14,17 +17,19 @@ export const Profile = (props) => {
     password: '',
     confirmPassword: '',
     restocity: '',
-    restocode: ''
+    restocode: '',
+    restodescrip: '',
+    selectedImage: null,
   };
 
   const [formData, setFormData] = useState(initialFormData);
   const [isEditable, setIsEditable] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showChangePassword, setShowChangePassword] = useState(false);
 
+  const toggleChangePassword = () => {
+    setShowChangePassword(!showChangePassword);
+  };
 
-  const toggleConfirmPassword = () => {
-    setShowConfirmPassword(!showConfirmPassword);
-  }
 
   const handleCancel = () => {
     setFormData(initialFormData);
@@ -36,11 +41,6 @@ export const Profile = (props) => {
     setIsEditable(!isEditable);
   }
 
-  const [error, setError] = useState({
-    password: '',
-    confirmPassword: '',
-  })
-
   const onInputChange = e => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -50,6 +50,27 @@ export const Profile = (props) => {
     validateInput(e);
   }
 
+  const [error, setError] = useState({
+    password: '',
+    confirmPassword: '',
+  })
+
+
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+
+    // Update formData with the selected image
+    setFormData({
+      ...formData,
+      selectedImage: URL.createObjectURL(file), // Assuming you want to display the image
+    });
+  };
+
+  const handleSelectImageClick = () => {
+    // Trigger the file input when the "Select Image" button is clicked
+    document.getElementById('profileImage').click();
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -67,7 +88,7 @@ export const Profile = (props) => {
       switch (name) {
         case "password":
           if (!value) {
-            stateObj[name] = "Please enter Password.";
+            stateObj[name] = "Please enter new Password.";
 
           } else if (formData.confirmPassword && value !== formData.confirmPassword) {
             stateObj["confirmPassword"] = "Password and Confirm Password does not match.";
@@ -78,7 +99,7 @@ export const Profile = (props) => {
 
         case "confirmPassword":
           if (!value) {
-            stateObj[name] = "Please enter Confirm Password.";
+            stateObj[name] = "Please enter Confirm new Password.";
           } else if (formData.password && value !== formData.password) {
             stateObj[name] = "Password and Confirm Password does not match.";
           }
@@ -92,18 +113,41 @@ export const Profile = (props) => {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   Access form data in `formData` and do something with it
-  // };
 
   return (
     <>
       <Navbar2 />
       <Sidebar />
       <div className='profile'>
-        <div class="circle2"></div>
         <form>
+          {/* Image holder (clickable) */}
+          <img
+            src={formData.selectedImage}
+            alt=""
+            className="profile-image"
+            onClick={isEditable ? handleSelectImageClick : undefined}
+          />
+
+          {/* File input */}
+          <input
+            type="file"
+            id="profileImage"
+            accept="image/*"
+            name="profileImage"
+            onChange={handleImageUpload}
+            disabled={!isEditable}
+            style={{ display: 'none' }}
+          />
+          {isEditable && (
+            <button
+              type="button"
+              className="btn-select-image"
+              onClick={handleSelectImageClick}
+            >
+              <FaPlusCircle />
+            </button>
+          )}
+
           <div className='form-prof'>
             <label>Resturant Name</label>
             <br />
@@ -126,7 +170,7 @@ export const Profile = (props) => {
               value={formData.email}
               onChange={onInputChange}
               placeholder="Sample Email"
-              disabled={!isEditable} // Use !isEditable to conditionally disable the input
+              disabled={true} // Use !isEditable to conditionally disable the input
             // disabled={someCondition ? true : false} // Disable based on someCondition
             />
             <br />
@@ -184,37 +228,45 @@ export const Profile = (props) => {
               value={formData.restoPermit}
               onChange={handleInputChange}
               placeholder="Sample Restaurant Permit"
-              disabled={!isEditable} // Use !isEditable to conditionally disable the input
+              disabled={true} // Use !isEditable to conditionally disable the input
             />
             <br />
             <br />
 
 
+            <label>Restaurant Description</label>
+            <br />
 
+            <div class='description'><input
+              type="text"
+              name="restodescrip"
+              value={formData.restodescrip}
+              onChange={handleInputChange}
+              placeholder="Sample Restaurant Description"
+              disabled={!isEditable} // Use !isEditable to conditionally disable the input
+            />
+            </div>
+            <br />
 
-            {isEditable && (
+            {showChangePassword && isEditable && (
               <>
-
                 <label>Password</label>
                 <br />
-
                 <input
                   type="password"
                   name="password"
                   placeholder='Enter Password'
-                  disabled={!isEditable} // Use !isEditable to conditionally disable the input
+                  disabled={!isEditable}
                   value={formData.password}
                   onChange={onInputChange}
-                  onBlur={validateInput}></input><br />
+                  onBlur={validateInput}
+                />
+                <br />
                 {error.password && <span className='err'>{error.password}</span>}
-
                 <br />
                 <br />
-
                 <label>Confirm Password</label>
-
                 <br />
-
                 <input
                   type="password"
                   name="confirmPassword"
@@ -226,35 +278,25 @@ export const Profile = (props) => {
                 />
                 {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
               </>
-
             )}
 
-            {/* <label>Confirm Password</label>
-            <br />
-
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder='Enter Confirm Password'
-              disabled={!isEditable} // Use !isEditable to conditionally disable the input
-              value={formData.confirmPassword}
-              onChange={onInputChange}
-              onBlur={validateInput}></input> */}
           </div>
         </form>
-        <div>
-          {isEditable ? (
-            <>
-              <button className="bttnsave" onClick={toggleEdit}>Save</button>
-              <button className="bttnedit2" onClick={handleCancel}>Cancel</button>
-            </>
-          ) : (
-            <>
-              <button className="bttnedit" onClick={toggleEdit}>Edit Profile</button>
-              <Link to="/login"><button className="Backs">LOG OUT!</button></Link>
-            </>
-          )}
-        </div>
+      </div>
+      <div>
+        {isEditable ? (
+          <>
+            <button className="bttnsave" onClick={toggleEdit}>Save</button>
+            <button className="bttnedit2" onClick={handleCancel}>Cancel</button>
+            <button className="bttnchapass" onClick={toggleChangePassword}>Change Password</button>
+          </>
+        ) : (
+          <>
+            <button className="bttnedit" onClick={toggleEdit}>Edit Profile</button>
+            <Link to="/login"><button className="Backs">LOG OUT</button></Link>
+            <button className="bttndeact">DEACTIVATE</button>
+          </>
+        )}
       </div>
     </>
   )

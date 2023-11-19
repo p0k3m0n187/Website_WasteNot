@@ -1,9 +1,9 @@
 import image from "../images/logo.png";
-import "../style.css";
+import "../Pages/Design/navbar.css";
 
 export default function Navbar() {
-    return <nav className="nav">
-        <a href="/" className="site-title"><img src={image} width={170} height={140} alt="NavBar logo"/>WasteNot</a>
+    return <nav className="navbar">
+        <a href="/" className="site-title"><img src={image} alt="NavBar logo"/>WasteNot</a>
         <ul>
             <li className="buttons">
                 <button type="button" class="faq">FAQ</button>

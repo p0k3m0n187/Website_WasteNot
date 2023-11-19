@@ -38,30 +38,8 @@ export const Register = (props) => {
     validateInput(e);
   }
 
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const [selectedImageName, setSelectedImageName] = useState('');
   const [selectedImageName2, setSelectedImageName2] = useState('');
-
-  // Add this function to handle image change
-  // const handleImageChange = (e) => {
-  //   const file = e.target.files[0];
-  //   setSelectedImage(file);
-  // }
-
   const [, setSelectedImage2] = useState(null);
-
-  // Add this function to handle image change
-  // const handleImageChange2 = (e) => {
-  //   const file = e.target.files[0];
-  //   setSelectedImage2(file);
-  // }
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setSelectedImage(file);
-    setSelectedImageName(file ? file.name : ''); // Update selected image name
-  }
 
   const handleImageChange2 = (e) => {
     const file = e.target.files[0];
@@ -149,187 +127,142 @@ export const Register = (props) => {
   return (
     <>
       <Navbar />
+      <div className='register-container'>
+        <div class="header ">Registration</div>
+        
+        <div className="app1">
+          <form>
+            <label>Restaurant Name</label>
+            <br />
+            <input
+              type="text"
+              name="restaurantname"
+              placeholder='Enter Restaurant Name'
+              value={input.restaurantname}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.restaurantname && <span className='err'>{error.restaurantname}</span>}
+            <br />
 
-      <div class="header ">Registration</div>
-      <div className="form-group">
-        <label htmlFor="image">Select Restaurant Image</label>
-        <br />
-        <br />
-        <input
-          type="file"
-          accept="image/*"
-          id="restaurantPermitImageButton2"
-          className="file-upload-input"
-          onChange={handleImageChange}
-          style={{ display: "none" }}
-        />
-        <label htmlFor="restaurantPermitImageButton2" className="file-upload-button2">
-          {selectedImageName || "No Files Chosen"}
-        </label>
-      </div>
+            <label>Email</label>
+            <br />
+            <input
+              type="email"
+              name="email"
+              placeholder='Enter Email'
+              value={input.email}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.email && <span className='err'>{error.email}</span>}
+            <br />
 
-      <div className="image-holder">
-        <div className="circle"></div>
-        {selectedImage && (
-          <img src={URL.createObjectURL(selectedImage)} alt="Selected" />
-        )}
-      </div>
-      <div className="app1">
-        <form>
-          <label>Restaurant Name</label>
-          <br />
-          <input
-            type="text"
-            name="restaurantname"
-            placeholder='Enter Restaurant Name'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.restaurantname}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.restaurantname && <span className='err'>{error.restaurantname}</span>}
-          <br />
+            <label>Restaurant Street Address</label>
+            <br />
+            <input
+              type="text"
+              name="restoAdd"
+              placeholder='Enter Resturant Street Address'
+              value={input.restoAdd}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.restoAdd && <span className='err'>{error.restoAdd}</span>}
+            <br />
 
-          <label>Email</label>
-          <br />
-          <input
-            type="email"
-            name="email"
-            placeholder='Enter Email'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.email}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.email && <span className='err'>{error.email}</span>}
-          <br />
+            <label>Restaurant City</label>
+            <br />
+            <input
+              type="text"
+              name="restocity"
+              placeholder='Enter Resturant Street Address'
+              value={input.restocity}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.restocity && <span className='err'>{error.restocity}</span>}
+            <br />
 
-          <label>Restaurant Street Address</label>
-          <br />
-          <input
-            type="text"
-            name="restoAdd"
-            placeholder='Enter Resturant Street Address'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.restoAdd}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.restoAdd && <span className='err'>{error.restoAdd}</span>}
-          <br />
+            <label>Contact Number</label>
+            <br />
+            <input
+              type="number"
+              name="contactnum"
+              placeholder='Enter Contact Number'
+              value={input.contactnum}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.contactnum && <span className='err'>{error.contactnum}</span>}
+            <br />
+            <Link to="/login"><button class="Back">Back</button></Link>
+          </form>
+        </div>
 
-          <label>Restaurant City</label>
-          <br />
-          <input
-            type="text"
-            name="restocity"
-            placeholder='Enter Resturant Street Address'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.restocity}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.restocity && <span className='err'>{error.restocity}</span>}
-          <br />
+        <div className='app2'>
+          <form>
+            <label>Restaurant Permit Number</label>
+            <br />
+            <input
+              type="text"
+              name="restoPermit"
+              placeholder='Enter Restaurant Permit Number'
+              value={input.restoPermit}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.restoPermit && <span className='err'>{error.restoPermit}</span>}
+            <br />
+            <label>Select Restaurant Permit Image</label>
 
-          <label>Contact Number</label>
-          <br />
-          <input
-            type="number"
-            name="contactnum"
-            placeholder='Enter Contact Number'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.contactnum}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.contactnum && <span className='err'>{error.contactnum}</span>}
-          <br />
-          {/* <button class="Back" onClick={() => props.onFormSwitch('Home')}>Cancel</button> */}
-          <Link to="/login"><button class="Back">Back</button></Link>
-        </form>
-      </div>
+            <input
+              type="file"
+              accept="image/*"
+              id="restaurantPermitImageButton"
+              className="file-upload-input"
+              onChange={handleImageChange2}
+              style={{ display: "none" }}
+            />
+            <br />
+            <label htmlFor="restaurantPermitImageButton" className="file-upload-button">
+              {selectedImageName2 || "No Files Chosen"}
+            </label>
+            <br />
+            <br />
 
-      <div className='app2'>
-        <form>
-          <label>Restaurant Permit Number</label>
-          <br />
-          <input
-            type="text"
-            name="restoPermit"
-            placeholder='Enter Restaurant Permit Number'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.restoPermit}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.restoPermit && <span className='err'>{error.restoPermit}</span>}
-          <br />
-          <label>Select Restaurant Permit Image</label>
-          {/* <br />
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageChange2}
-            style={{ width: "23vw", height: "2vw" }}
-          />
-          <br />
-          <br />
+            <label>Zip Code</label>
+            <br />
+            <input
+              type="number"
+              name="restocode"
+              placeholder='Enter Zip Code'
+              value={input.restocode}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.restocode && <span className='err'>{error.restocode}</span>}
+            <br />
 
-          <label htmlFor="restaurantPermitImageButton" className="file-upload-button">
-            Select Restaurant Permit Image
-          </label> */}
+            <label>Password</label>
+            <br />
+            <input
+              type="password"
+              name="password"
+              placeholder='Enter Password'
+              value={input.password}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.password && <span className='err'>{error.password}</span>}
+            <br />
 
-          <input
-            type="file"
-            accept="image/*"
-            id="restaurantPermitImageButton"
-            className="file-upload-input"
-            onChange={handleImageChange2}
-            style={{ display: "none" }}
-          />
-          <br />
-          <label htmlFor="restaurantPermitImageButton" className="file-upload-button">
-            {selectedImageName2 || "No Files Chosen"}
-          </label>
-          <br />
-          <br />
-
-          <label>Zip Code</label>
-          <br />
-          <input
-            type="number"
-            name="restocode"
-            placeholder='Enter Zip Code'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.restocode}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.restocode && <span className='err'>{error.restocode}</span>}
-          <br />
-
-          <label>Password</label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            placeholder='Enter Password'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.password}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.password && <span className='err'>{error.password}</span>}
-          <br />
-
-          <label>Confirm Password</label>
-          <br />
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder='Enter Confirm Password'
-            style={{ width: "23vw", height: "2vw" }}
-            value={input.confirmPassword}
-            onChange={onInputChange}
-            onBlur={validateInput}></input><br />
-          {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
-          <br />
-          {/* <button class="Register" onClick={() => props.onFormSwitch('Home')}>Register</button> */}
-          <Link to="/login"><button class="Register">Register</button></Link>
-        </form>
+            <label>Confirm Password</label>
+            <br />
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder='Enter Confirm Password'
+              value={input.confirmPassword}
+              onChange={onInputChange}
+              onBlur={validateInput}></input><br />
+            {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
+            <br />
+            <Link to="/login"><button class="Register">Register</button></Link>
+          </form>
+        </div>
       </div>
     </>
   )

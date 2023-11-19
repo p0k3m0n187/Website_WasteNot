@@ -20,131 +20,97 @@ body {
 }
 
 .word {
-    /* padding-left: 1vw;
-    font-size: 10vw; Use viewport units for responsive font size
-    font-weight: bold;
-    padding-top: 2vw;
-    color: #57B961;
-    font-style: italic; */
-    font-size: 8vw;
+    font-size: 3vw;
     position: absolute;
-    /* Set the position to absolute */
     top: 20%;
-    /* Adjust the top position as a percentage of the container's height */
-    left: 140%;
-    /* Adjust the left position as a percentage of the container's width */
+    left: 135%;
     transform: translate(-50%, -50%);
     font-weight: bold;
     padding-top: 2vw;
     color: #57B961;
-    ;
-    /* Center the element both horizontally and vertically */
-
-}
-
-.paragraph {
-    font-size: 1.5vw;
-    /* Use viewport units for responsive font size */
-    color: #57B961;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .login {
-    left: 57%;
-    top: 8vw;
-    font-size: 2vw;
-    /* Use viewport units for responsive font size */
-    color: #57B961;
-    font-style: italic;
-    padding-left: 1vw;
-    /* Use percentages for padding */
+    position: absolute;
+    left: 53vw;
+    top: 9vw;
     position: relative;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
-    box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
-    /* align-items: center; */
 }
 
-
-.logo {
-    padding-left: 1vw;
-    /* Use viewport units for responsive padding */
-    padding-top: 25vw;
-    /* Use viewport units for responsive padding */
-    flex: 1;
+.login label{
+    font-size: 1.5vw;
+    color: #57B961;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
-.login .LogIn {
-    top: 15vw;
-    background-color: #57B961;
-    color: black;
-    border-color: #023808;
-    font-size: 1.3vw;
-    /* Use viewport units for responsive font size */
-    padding: 1.5vw 10vw;
-    /* Use viewport units for responsive padding */
-    border-radius: 2vw;
-    /* Use viewport units for responsive border radius */
-    margin: 1vw 0;
-    cursor: pointer;
-    position: absolute;
-    left: 6vw;
-
-}
-
-.login .Register {
-    background-color: #57B961;
-    color: black;
-    border-color: #023808;
-    font-size: 1.3vw;
-    /* Use viewport units for responsive font size */
-    padding: 1.5vw 9.2vw;
-    /* Use viewport units for responsive padding */
-    border-radius: 2vw;
-    /* Use viewport units for responsive border radius */
-    cursor: pointer;
-    position: absolute;
-    margin: 1vw 0;
-    left: 6vw;
-    margin-top: 22vw;
-    box-shadow: 100000px 4px 4px rgba(0, 0, 0, 0.1);
-}
-
 
 .login input {
-    width: 150%;
+    margin-bottom: 1.5vw;
+    width: 30vw;
     background-color: #dfe4e0;
     color: #57B961;
-    border-radius: 20000000000vw;
-    /* Use viewport units for responsive border radius */
-    border-width: 0.5vw;
-    /* Use viewport units for responsive border width */
-    height: 5vw;
-    /* Use viewport units for responsive height */
+    border-radius: 1.5vw;
+    height: 4vw;
     outline: none;
-    font-size: 1.5vw;
-    /* Use viewport units for responsive font size */
-    padding: 2vw;
-    /* Use viewport units for responsive padding */
-    border: 0.2vw solid #023808;
-    /* Use viewport units for responsive border width */
+    font-size: 1vw;
+    padding: 1vw;
+    border: 0.2vw solid #026b0c;
+    box-shadow: -0.5em 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.containers .LogIn {
+    top: 16vw;
+    background-color: #57B961;
+    color: black;
+    border-color: black;
+    font-size: 1vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    width: 15vw;
+    height: 3vw;
+    cursor: pointer;
+    position: absolute;
+    left: 6.7vw;
+    text-decoration: underline;
+    box-shadow: -0.5em 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.containers .LogIn:hover{
+    background-color: white;
+    color: #57B961;
+    border: 2px solid;
+    border-color: #57B961;
+}
+
+.containers .Register {
+    position: absolute;
+    background-color: #57B961;
+    border-color: black;
+    font-size: 1vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    position: absolute;
+    left: 6vw;
+    top: 20vw;
+    text-decoration: underline;
+    width: 15vw;
+    height: 3vw;
+    box-shadow: -0.5em 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.containers .Register:hover{
+    background-color: white;
+    color: #57B961;
+    border: 2px solid;
+    border-color: #57B961;
 }
 
 .logo {
-    max-width: 700px;
-    /* Set a maximum width for the container */
-    margin: 0 auto;
-    /* Center the container on the page */
-    text-align: center;
-    /* Center the image horizontally */
-}
-
-.logo img {
-    width: 200%;
-    /* Make sure the image takes up 100% of the width of the container */
-    height: 1500%;
-    /* Make sure the image takes up 100% of the height of the container */
-    object-fit: cover;
-    /* Ensures the image covers the entire container */
+    position:absolute;
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    top: 6vw;
+    left: 19vw;
 }

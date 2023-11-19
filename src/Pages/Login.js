@@ -1,6 +1,6 @@
 import logo from '../images/dota2.png';
 import './Design/logindesign.css';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 
@@ -25,25 +25,37 @@ export const Login = (props) => {
             <p>WELCOME</p>
           </div>
           <div className="login">
-            <div class="Label1"></div>
             <form onSubmit={handleSubmit}>
-              <lable class="email" hmtlFor="Email">Email</lable>
-              <input value={Email} onChange={(e) => setEmail(e.target.value)} type='Email' placeholder='Email' id="Email" name="Email" />
+              <label className="emailLabel" htmlFor="Email">Email</label>
               <br />
-              <lable hmtlFor="Password">Password</lable>
-              <input value={Password} onChange={(e) => setPassword(e.target.value)} type='Password' placeholder='**********' id="Password" name="Password" />
-            </form>
-            <Link to="/homepage"><button type="Submit" class="LogIn">Log In</button></Link>
-            {/* <button class="Register" onClick={() => props.onFormSwitch('Register')}>Register</button>
-            <button class="Profile" onClick={() => props.onFormSwitch('Profile')}>Profile</button> */}
-            
-            <Link to="/register" className="Regist"><button class="Register">Register</button></Link>
-            {/* <Link to="/profile" className="Prof"><button class="Profile">Profile</button></Link> */}
-
-
+              <input
+                value={Email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Email"
+                id="Email"
+                name="Email"
+                className="emailInput"
+              />
+              <br />
+              <label htmlFor="Password">Password</label>
+              <br />
+              <input
+                value={Password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                placeholder="**********"
+                id="Password"
+                name="Password"
+                className="passwordInput"
+              />
+          <Link to="/homepage"><button type="Submit" class="LogIn">Log In</button></Link>
+          <Link to="/register" className="Regist"><button class="Register">Register</button></Link>
+          </form>
           </div>
         </div>
       </div>
+
 
     </>
 

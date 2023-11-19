@@ -1,154 +1,129 @@
 * {
     box-sizing: border-box;
 }
-body{
+
+.register-container {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
 }
+
 .header {
-    font-size: 4vw; /* Changed to responsive unit */
-    padding: 2% 3%; /* Changed to responsive unit */
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3vw;
+    padding: 1vw;
     color: #57B961;
-    font-weight: bold; /* Changed from font-style to font-weight */
+    font-weight: 900;
 }
 
 .app1 {
-    color:#9bb39d;
+    display: flex;
+    color: #9bb39d;
     font-style: bold;
     font-size: 1.5vw;
     position: absolute;
-    top: 90%;
-    left: 30%;
+    top: 25%;
+    left: 20vw;
+}
+
+.app1 input {
+    background-color: #dfe4e0;
+    color: #57B961;
+    border-radius: 1.2vw;
+    height: 1.5vw;
     width: 30vw;
-    align-items: stretch;
-    border-radius: 100px;
+    font-size: 1vw;
+    padding: 1.5vw;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .app2 {
-    color:#9bb39d;
+    display: flex;
+    color: #9bb39d;
     font-style: bold;
     font-size: 1.5vw;
     position: absolute;
-    top: 90%;
-    left: 55%;
-    width: 30vw;
-    align-items: stretch;
-    
+    top: 25%;
+    left: 55vw;
+
 }
 
-.app1 input{
-    width: calc(100% - 60px); /* Changed to responsive unit */
+.app2 input {
     background-color: #dfe4e0;
     color: #57B961;
-    border-radius: 100px;
-    border-width: 2px;
-    height: 50px;
-    outline: none;
-    font-size: 1vw; /* Changed to responsive unit */
-    padding: 1.5vw; /* Changed to responsive unit */
-    border: 1px solid #023808; /* Changed to use 'solid' */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+    border-radius: 1.2vw;
+    height: 1.5vw;
+    width: 30vw;
+    font-size: 1vw;
+    padding: 1.5vw;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.err{
-    font-size: 1vw; /* Changed to responsive unit */
+.err {
+    font-size: 1vw;
     color: red;
 }
 
-.app2 input{
-    width: calc(100% - 60px); /* Changed to responsive unit */
-    background-color: #dfe4e0;
-    color: #57B961;
-    border-radius: 100px;
-    border-width: 2px;
-    height: 50px;
-    outline: none;
-    font-size: 1vw; /* Changed to responsive unit */
-    padding: 1.5vw 2vw; /* Changed to responsive unit */
-    border: 1px solid #023808; /* Changed to use 'solid' */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Added box-shadow */
-}
-
-.Back{
-    background-color: #57B961;
-    color: black;
-    border: 2px solid #023808; /* Changed to use 'solid' */
-    font-size: 1vw; /* Changed to responsive unit */
-    padding: 1vw 4vw; /* Changed to responsive unit */
-    border-radius: 1vw; /* Changed to responsive unit */
-    margin: 1vw; /* Changed to responsive unit */
-    margin-left: 40%;
-    margin-top: 1%;
-    cursor: pointer;
-    display: inline-block; /* Added */
-}
-
-
-.Register{
-    background-color: #57B961;
-    color: black;
-    border: 2px solid #023808; /* Changed to use 'solid' */
-    font-size: 1vw; /* Changed to responsive unit */
-    padding: 1vw 3.8vw; /* Changed to responsive unit */
-    border-radius: 1vw; /* Changed to responsive unit */
-    margin: 1vw; /* Changed to responsive unit */
-    cursor: pointer;
-    margin-left: 2%;
-    margin-top: 1%;
-    display: inline-block; /* Added */
-}
-
-.form-group{
+.Back {
     position: absolute;
-    top: 37vw;
-    left: 44vw;
-}
-
-.form-group label{
+    background-color: #57B961;
+    border-color: black;
     font-size: 1vw;
-    padding: 1vw 5vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    text-decoration: underline;
+    width: 12vw;
+    height: 3.5vw;
+    box-shadow: -0.5em 1rem 1rem rgba(0, 0, 0, 0.4);
+    margin-left: 18vw;
 }
 
-.image-holder {
-    position: relative;
-    width: 10vw; /* Adjust the width of the holder */
-    height: 10vw; /* Adjust the height of the holder */
+.Back:hover{
+    background-color: white;
+    color: #57B961;
+    border: 2px solid;
+    border-color: #57B961;
 }
 
-.circle {
+
+.Register {
+    margin-left: 2%;
     position: absolute;
-    width: 20vw;
-    height: 20vw;
-    top: -1vw;
-    left: 43vw;
-    border-radius: 50%;
-    background-color: #ccc; /* Set a background color for the circle */
-    z-index: -1; /* Move the circle behind the image */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+    background-color: #57B961;
+    border-color: black;
+    font-size: 1vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    position: absolute;
+    text-decoration: underline;
+    width: 12vw;
+    height: 3.5vw;
+    box-shadow: -0.5em 1rem 1rem rgba(0, 0, 0, 0.4);
 }
 
-.image-holder img {
-    position: relative;
-    width: 20vw;
-    height: 20vw;
-    top: -1vw;
-    left: 43vw;
-    border: 1px solid black;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+.Register:hover{
+    background-color: white;
+    color: #57B961;
+    border: 2px solid;
+    border-color: #57B961;
 }
 
-.preview {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 30vw; /* Adjust the width as needed */
-    height: 30vw; /* Adjust the height as needed */
-    object-fit: cover; /* Ensures the image covers the entire space without stretching */
+.form-group {
+    position: absolute;
+    top: 30vw;
+    left: 42vw;
 }
 
-.file-upload-button{
+.form-group label {
+    font-size: 1vw;
+}
+
+.file-upload-button {
     color: white;
     padding: 0.6vw 1vw;
     cursor: pointer;
@@ -159,34 +134,14 @@ body{
 }
 
 .file-upload-button2 {
-    color: rgb(255, 255, 255);
-    padding: 0.6vw 1vw;
+    color: white;
+    padding: 1vw;
     cursor: pointer;
     display: inline-block;
     border: 1px solid #6bf04a;
-    border-radius: 20px;
+    border-radius: 0.8vw;
     background: #056805;
-  }
-  
-  .file-upload-input,
-  .file-upload-input2 {
-    display: none;
-  }
-
-/* Added media query for smaller screens */
-@media (max-width: 100%) {
-    .header {
-        font-size: 5vw;
-    }
-
-    .app1 input,
-    .app2 input,
-    .err,
-    .app1,
-    .app2,
-    .Back,
-    .form-group,
-    .Register {
-        font-size: 3vw;
-    }
-} 
+    height: 3vw;
+    text-align: center;
+    margin-left: 4vw;
+}
