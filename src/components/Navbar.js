@@ -6,10 +6,10 @@ export default function Navbar() {
         <a href="/" className="site-title"><img src={image} alt="NavBar logo"/>WasteNot</a>
         <ul>
             <li className="buttons">
-                <button type="button" class="faq">FAQ</button>
+                <button type="button" className="faq">FAQ</button>
             </li>
             <li>
-                <button type="button" class="aboutus">About Us</button>
+                <button type="button" className="aboutus">About Us</button>
             </li>
         </ul> 
     </nav>

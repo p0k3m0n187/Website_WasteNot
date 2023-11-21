@@ -2,30 +2,45 @@ import logo from '../images/dota2.png';
 import './Design/logindesign.css';
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../config/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 
 export const Login = (props) => {
   const [Email, setEmail] = useState('');
   const [Password, setPassword] = useState('');
+  const history = useNavigate(); // Initialize useHistory
 
-  const handleSubmit = (e) => {
+  const signIn = async (e) => {
     e.preventDefault();
-    console.log(Email);
-  }
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, Email, Password);
+      console.log('Logged in:', userCredential.user);
+
+      // Redirect to the homepage after successful login
+      history('/homepage'); // Call the function returned by useNavigate
+    } catch (error) {
+      console.log('Error logging in:', error.message);
+
+      // Show an alert message when login fails
+      window.alert('Invalid email or password. Please try again.');
+    }
+  };
 
   return (
     <>
       <Navbar />
       <div className="App">
-        <div class="containers">
-          <div class="logo">
+        <div className="containers">
+          <div className="logo">
             <img alt="bodylogo" src={logo} />
           </div>
-          <div class="word">
+          <div className="word">
             <p>WELCOME</p>
           </div>
           <div className="login">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={signIn}>
               <label className="emailLabel" htmlFor="Email">Email</label>
               <br />
               <input
@@ -49,18 +64,14 @@ export const Login = (props) => {
                 name="Password"
                 className="passwordInput"
               />
-          <Link to="/homepage"><button type="Submit" class="LogIn">Log In</button></Link>
-          <Link to="/register" className="Regist"><button class="Register">Register</button></Link>
-          </form>
+              <button type="submit" className="LogIn">Log In</button>
+            </form>
+            <Link to="/register"><button className="Register">Register</button></Link>
           </div>
         </div>
       </div>
-
-
     </>
-
-  )
-
-}
+  );
+};
 
 export default Login;

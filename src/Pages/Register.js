@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import './Design/registerdesign.css';
 import { Link } from 'react-router-dom';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import './Design/registerdesign.css';
+import { useNavigate } from 'react-router-dom';
 
 export const Register = (props) => {
+
 
   const [input, setInput] = useState({
     restaurantname: '',
@@ -29,14 +33,14 @@ export const Register = (props) => {
     restocode: ''
   })
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     const { name, value } = e.target;
-    setInput(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    validateInput(e);
-  }
+    setInput((prev) => {
+      const updatedInput = { ...prev, [name]: value };
+      validateInput({ target: { name, value } }); // Pass the updated input to validateInput
+      return updatedInput;
+    });
+  };
 
   const [selectedImageName2, setSelectedImageName2] = useState('');
   const [, setSelectedImage2] = useState(null);
@@ -63,6 +67,8 @@ export const Register = (props) => {
         case "email":
           if (!value) {
             stateObj[name] = "Please enter Email.";
+          } else if (!isValidEmail(value)) {
+            stateObj[name] = "Please enter a valid Email.";
           }
           break;
 
@@ -124,14 +130,66 @@ export const Register = (props) => {
     });
   }
 
+  const isValidEmail = (email) => {
+    // Use a regular expression for basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  const auth = getAuth(); // Initialize Firebase Authentication
+  const db = getFirestore(); // Initialize Firestore
+  const history = useNavigate(); // Initialize useHistory
+
+  const registerUser = async (e) => {
+    e.preventDefault();
+    // Check if any required field is empty
+    const isAnyFieldEmpty = Object.values(input).some((val) => val.trim() === '');
+    if (isAnyFieldEmpty) {
+      window.alert('Please fill up the fields.');
+      return;
+    }
+
+    try {
+      // Create user in Firebase Authentication
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        input.email,
+        input.password
+      );
+
+      const usersCollectionRef = collection(db, 'users');
+      console.log('before adding the firestore')
+
+      // Add additional user data to Firestore
+      const userDocRef = await addDoc(usersCollectionRef, {
+        user_id: userCredential.user.uid,
+        restaurantName: input.restaurantname,
+        restaurantEmail: input.email,
+        restaurantAddress: input.restoAdd,
+        contactNum: input.contactnum,
+        restaurantPermit: input.restoPermit,
+        restaurantCity: input.restocity,
+        zipCode: input.restocode,
+      });
+
+      console.log('User registered successfully:', userDocRef.id);
+      history('/profile'); // Call the function returned by useNavigate
+
+    } catch (error) {
+      console.error('Error registering user:', error.code, error.message);
+      // Handle error and show it to the user if needed
+    }
+  };
+
+
   return (
     <>
       <Navbar />
       <div className='register-container'>
-        <div class="header ">Registration</div>
-        
+        <div className="header ">Registration</div>
+
         <div className="app1">
-          <form>
+          <form onSubmit={registerUser}>
             <label>Restaurant Name</label>
             <br />
             <input
@@ -191,12 +249,12 @@ export const Register = (props) => {
               onBlur={validateInput}></input><br />
             {error.contactnum && <span className='err'>{error.contactnum}</span>}
             <br />
-            <Link to="/login"><button class="Back">Back</button></Link>
+            <Link to="/login"><button className="Back">Back</button></Link>
           </form>
         </div>
 
         <div className='app2'>
-          <form>
+          <form onSubmit={registerUser}>
             <label>Restaurant Permit Number</label>
             <br />
             <input
@@ -260,7 +318,8 @@ export const Register = (props) => {
               onBlur={validateInput}></input><br />
             {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
             <br />
-            <Link to="/login"><button class="Register">Register</button></Link>
+            <Link to="/profile"><button onClick={registerUser} type="submit" className="Register">Register</button></Link>
+            {/* <button onClick={registerUser} type="submit" className="Register">Register</button> */}
           </form>
         </div>
       </div>

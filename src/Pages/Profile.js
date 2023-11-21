@@ -1,13 +1,26 @@
 import React, { useState } from 'react';
 import './Design/profiledesign.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import Navbar2 from '../components/NavBar2';
 import {
   FaPlusCircle
 } from 'react-icons/fa';
+import { signOut } from 'firebase/auth';
+import { auth } from '../config/firebase';
+import { useNavigate } from 'react-router-dom';
 
 export const Profile = (props) => {
+
+  const history = useNavigate()
+
+  const handleClick = () =>{
+    signOut(auth).then(val=>{
+      console.log(val,"val")
+      history('/')
+    })
+  }
+
   const initialFormData = {
     restaurantname: '',
     email: '',
@@ -237,7 +250,7 @@ export const Profile = (props) => {
             <label>Restaurant Description</label>
             <br />
 
-            <div class='description'><input
+            <div className='description'><input
               type="text"
               name="restodescrip"
               value={formData.restodescrip}
@@ -293,7 +306,8 @@ export const Profile = (props) => {
         ) : (
           <>
             <button className="bttnedit" onClick={toggleEdit}>Edit Profile</button>
-            <Link to="/login"><button className="Backs">LOG OUT</button></Link>
+            {/* <Link to="/login"><button className="Backs">LOG OUT</button></Link> */}
+            <button onClick={handleClick} className="Backs">LOG OUT</button>
             <button className="bttndeact">DEACTIVATE</button>
           </>
         )}
