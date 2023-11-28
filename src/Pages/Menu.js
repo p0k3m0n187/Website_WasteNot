@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import Navbar2 from '../components/NavBar2';
 import './Design/menudesign.css';
 import image from "../images/steak_sample.png";
+import { Link } from "react-router-dom";
 import {
     FaWarehouse,
     FaPlusCircle
@@ -22,7 +23,7 @@ export const Menu = (props) => {
                     <br />
                     <h1>50</h1>
                 </div>
-                <div><button class='bttn-add'><FaPlusCircle /></button></div>
+                <Link to="/addDish"><div><button class='bttn-add'><FaPlusCircle /></button></div></Link>
                 <div className="scrollabe-menu">
                     <table class='menu-table'>
                         <thead>

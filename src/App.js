@@ -9,6 +9,7 @@ import { Menu } from './Pages/Menu.js';
 import { Inventory } from './Pages/Inventory.js';
 import { Market } from './Pages/Market.js';
 import { AddStaff } from './Pages/AddStaff.js';
+import { AddDish } from './Pages/AddDish.js';
 
 const App = () => {
   const storedForm = localStorage.getItem('currentForm');
@@ -44,6 +45,7 @@ const App = () => {
         <Route path='/inventory' element={<Inventory onFormSwitch={toggleForm} />} />
         <Route path='/profile' element={<Profile onFormSwitch={toggleForm} />} />
         <Route path='/addstaff' element={<AddStaff onFormSwitch={toggleForm} />} />
+        <Route path='/addDish' element={<AddDish onFormSwitch={toggleForm} />} />
       </Routes>
     </BrowserRouter>
     </>

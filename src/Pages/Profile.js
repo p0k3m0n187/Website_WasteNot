@@ -133,7 +133,6 @@ export const Profile = (props) => {
       <Sidebar />
       <div className='profile'>
         <form>
-          {/* Image holder (clickable) */}
           <img
             src={formData.selectedImage}
             alt=""
